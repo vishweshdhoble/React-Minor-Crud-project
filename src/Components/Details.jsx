@@ -15,20 +15,6 @@ const Details = () => {
 
   const navigate  =  useNavigate();
 
-    // const getSingleProduct =async() => {
-    //     try {
-    //         const {data} = await axios(`/products/${id}`)
-    //         setProduct(data);
-    //         console.log(data);
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // };
-
-    // useEffect(()=>{
-    //     getSingleProduct();
-    // },[])
-
     useEffect(()=>{
         if(!product){
           setProduct(products.filter((p)=>p.id==id)[0]);

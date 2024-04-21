@@ -11,15 +11,6 @@ const Home = () => {
   const category = decodeURIComponent(search.split("=")[1]);
   const [filteredProducts, setFilteredProducts] = useState(null);
 
-  // const getProductCategory = async() =>{
-  //   try {
-  //       const {data} = await axios.get(`/products/category/${category}`);
-  //       setFilteredProducts(data);
-  //   } catch (error) {
-  //       console.log(error);
-  //   }
-  // }
-
   useEffect(()=>{
     if(!filteredProducts || category == 'undefined') setFilteredProducts(products);
     if(category != "undefined"){

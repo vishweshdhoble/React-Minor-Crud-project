@@ -42,12 +42,6 @@ const Edit = () => {
     copyData[pindex] = { ...products[pindex], ...product };
 
     setProducts(copyData);
-    // setTitle("");
-    // setCategory("");
-    // setPrice("");
-    // setDescription("");
-    // setImage("");
-    // setProducts([...products, product]);
     localStorage.setItem("products", JSON.stringify(copyData));
     toast.success("Product edited successfully");
     navigate(-1);
@@ -55,11 +49,6 @@ const Edit = () => {
 
   useEffect(() => {
     setProduct(products.filter((p) => p.id == id)[0]);
-    // setTitle(product.title);
-    // setImage(product.image);
-    // setPrice(product.price);
-    // setCategory(product.category);
-    // setDescription(product.description);
   }, [id]);
 
   const changeHandler = (e) => {
